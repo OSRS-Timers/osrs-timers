@@ -1,0 +1,297 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>OSRS Farm Timer</title>
+	<meta content="Old School Runescape Farming Time Reminder">
+	<meta content="ryAn_Hdot">
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"></script>
+	<script src="ics-deps.js"></script>
+	<script src="ics.js"></script>
+</head>
+
+<body>
+	<h1>HERBS</h1>
+	<div class="container">
+		<div class="row">
+			<div class= "col-sm"><button name="Guam" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Guam'))">Guam</button></div>
+			<div class= "col-sm"><button name="Marrentill" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Marrentill'))">Marrentill</button></div>
+			<div class= "col-sm"><button name="Tarromin" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Tarromin'))">Tarromin</button></div>
+		</div>
+		<div class="row">
+			<div class= "col-sm"><button name="Harralander" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Harralander'))">Harralander</button></div>
+			<div class= "col-sm"><button name="Ranarr" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Ranarr'))">Ranarr</button></div>
+			<div class= "col-sm"><button name="Toadflax" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Toadflax'))">Toadflax</button></div>
+		</div>
+		<div class="row">
+			<div class= "col-sm"><button name="Irit" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Irit'))">Irit</button></div>
+			<div class= "col-sm"><button name="Avantoe" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Avantoe'))">Avantoe</button></div>
+			<div class= "col-sm"><button name="Kwuarm" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Kwuarm'))">Kwuarm</button></div>
+		</div>
+		<div class="row">
+			<div class= "col-sm"><button name="Snapdragon" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Snapdragon'))">Snapdragon</button></div>
+			<div class= "col-sm"><button name="Cadantine" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Cadantine'))">Cadantine</button></div>
+			<div class= "col-sm"><button name="Lantadyme" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Lantadyme'))">Lantadyme</button></div>
+		</div>
+		<div class="row">
+			<div class= "col-sm"><button name="Dwarf" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Dwarf'))">Dwarf</button></div>
+			<div class= "col-sm"><button name="Torstol" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Herb', 'Torstol'))">Torstol</button></div>
+			<div class= "col-sm"></div>
+		</div>
+	</div>
+
+	<h1>HARDWOOD TREE</h1>
+	<div class="container">
+		<div class="row">
+			<div class= "col-sm"><button name="Acorn" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Wood', 'Acorn'))">Acorn</button></div>
+			<div class= "col-sm"><button name="Willow" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Wood', 'Willow'))">Willow</button></div>
+			<div class= "col-sm"><button name="Maple" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Wood', 'Maple'))">Maple</button></div>
+		</div>
+		<div class="row">
+			<div class= "col-sm"><button name="Yew" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Wood', 'Yew'))">Yew</button></div>
+			<div class= "col-sm"><button name="Magic" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Wood', 'Magic'))">Magic</button></div>
+			<div class= "col-sm"></div>
+		</div>
+	</div>
+
+	<h1>FRUIT TREE</h1>
+	<div class="container">
+		<div class="row">
+			<div class= "col-sm"><button name="Apple" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Fruit', 'Apple'))">Apple</button></div>
+			<div class= "col-sm"><button name="Banana" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Fruit', 'Banana'))">Banana</button></div>
+			<div class= "col-sm"><button name="Orange" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Fruit', 'Orange'))">Orange</button></div>
+		</div>
+		<div class="row">
+			<div class= "col-sm"><button name="Curry" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Fruit', 'Curry'))">Curry</button></div>
+			<div class= "col-sm"><button name="Pineapple" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Fruit', 'Pineapple'))">Pineapple</button></div>
+			<div class= "col-sm"><button name="Papaya" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Fruit', 'Papaya'))">Papaya</button></div>
+		</div>
+		<div class="row">
+			<div class= "col-sm"><button name="Palm" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Fruit', 'Palm'))">Palm</button></div>
+			<div class= "col-sm"></div>
+			<div class= "col-sm"></div>
+		</div>
+	</div>
+
+	<h1>SPIRIT</h1>
+	<div class="container">
+		<div class="row">
+			<div class= "col-sm"><button name="Spirit" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Spirit', 'Spirit'))">Spirit</button>
+			</div>
+			<div class= "col-sm"></div>
+			<div class= "col-sm"></div>
+		</div>
+	</div>
+
+	<h1>BIRDHOUSES</h1>
+	<div class="container">
+		<div class="row">
+			<div class= "col-sm"><button name="Birdhouse" type="button" class="btn btn-lg btn-block btn-success" onclick="addEvent(plantForName('Birdhouse', 'Birdhouse'))">Birdhouses</button>
+			</div>
+			<div class= "col-sm"></div>
+			<div class= "col-sm"></div>
+		</div>
+	</div>
+
+	<div class="container" style="padding-top: 2em; padding-bottom: 2em;">
+		<div class="row">
+			<div class= "col-sm">
+				<button type="button" class="btn btn-info btn-block" style="width:100%" onclick="download()">Download</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>
+		let herb = {
+			"Guam": {
+				"level": 9,
+				"minutes": 70
+			},
+			"Marrentill": {
+				"level": 14,
+				"minutes": 70
+			},
+			"Tarromin": {
+				"level": 19,
+				"minutes": 70
+			},
+			"Harralander": {
+				"level": 26,
+				"minutes": 70
+			},
+			"Ranarr": {
+				"level": 32,
+				"minutes": 70
+			},
+			"Toadflax": {
+				"level": 38,
+				"minutes": 70
+			},
+			"Irit": {
+				"level": 44,
+				"minutes": 70
+			},
+			"Avantoe": {
+				"level": 50,
+				"minutes": 70
+			},
+			"Kwuarm": {
+				"level": 56,
+				"minutes": 70
+			},
+			"Snapdragon": {
+				"level": 62,
+				"minutes": 70
+			},
+			"Cadantine": {
+				"level": 67,
+				"minutes": 70
+			},
+			"Lantadyme": {
+				"level": 73,
+				"minutes": 70
+			},
+			"Dwarf": {
+				"level": 79,
+				"minutes": 70
+			},
+			"Torstol": {
+				"level": 85,
+				"minutes": 70
+			},
+		}
+
+
+		//
+		let wood = {
+			"Acorn" : {
+				"level": 15,
+				"payment": "1 Basket of Tomatoes",
+				"minutes": 200
+			},
+			"Willow" : {
+				"level": 30,
+				"payment": "1 Basket of Apples",
+				"minutes": 280
+			},
+			"Maple" : {
+				"level": 45,
+				"payment": "1 Basket of Oranges",
+				"minutes": 320
+			},
+			"Yew" : {
+				"level": 60,
+				"payment": "10 Cactus Spines",
+				"minutes": 400
+			},
+			"Magic" : {
+				"level": 75,
+				"payment": "25 Coconuts",
+				"minutes": 480
+			},
+			
+		}
+
+		let fruit = {
+			"Apple": {
+				"level": 27,
+				"payment": "9 Sweetcorns"
+			},
+			"Banana": {
+				"level": 33,
+				"payment": "4 Baskets of Apples"
+			},
+			"Orange": {
+				"level": 39,
+				"payment": "3 Baskets of Strawberries"
+			},
+			"Curry": {
+				"level": 42,
+				"payment": "5 Baskets of Bananas"
+			},
+			"Pineapple": {
+				"level": 51,
+				"payment": "10 Watermelons"
+			},
+			"Papaya": {
+				"level": 57,
+				"payment": "10 Pineapples"
+			},
+			"Palm": {
+				"level": 68,
+				"payment": "15 Papaya Fruit"
+			},
+		}
+
+		let spirit = {
+			"level": 83,
+			"payment": "5 Monkey Nuts, 1 Monkey Bar, 1 Ground Suqah Tooth",
+			"minutes": 3520
+		}
+
+		var ics = ics();
+
+		let Plant = class {
+			constructor(type, name, level, minutes) {
+				this.type = type;
+				this.name = name;
+				this.level = level;
+				this.growTime = minutes;
+				this.begin = Date.now();
+				this.end = new Date(this.begin + this.growTime * 60000);
+			}
+		}
+
+		let plantForName = function(type, name) {
+			plant = null;
+
+			switch(type) {
+				case 'Herb':
+				plant = new Plant(type, name, herb[name]['level'], 70);
+				break;
+				case 'Wood':
+				plant = new Plant(type, name, wood[name]['level'], wood[name]['minutes']);
+				break;
+				case 'Fruit':
+				plant = new Plant(type, name, fruit[name]['level'], 9 * 60);
+				break;
+				case 'Spirit':
+				plant = new Plant(type, name, spirit['level'], spirit['minutes']);
+				break;
+				case 'Birdhouse':
+				plant = new Plant(type, name, 0, 50);
+				break;
+			}
+			return plant;
+		}
+
+		let addEvent = function(plant) {
+			ics.addEvent(
+				plant.name + " is done!", 
+				"Courtesy of OSRS Farm Timer :)", 
+				"Gielinor",
+				plant.begin,
+				plant.end);
+
+			document.querySelector("button[name='" + plant.name + "']").setAttribute('disabled', null);
+		}
+
+		let download = function() {
+			ics.download('osrs-timer-calendar');
+		}
+
+</script>
+
+<style type="text/css">
+.btn-block {
+	height: 95%;
+	padding: 15% 0;
+}
+</style>
+</body>
+</html>
