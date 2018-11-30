@@ -218,7 +218,7 @@ var ics = function(uidDomain, prodId) {
       var calendar = calendarStart + SEPARATOR + calendarEvents.join(SEPARATOR) + calendarEnd;
 
       var blob;
-      if (navigator.userAgent.indexOf('MSIE 10') === -1) { // chrome or firefox
+      if (true){//navigator.userAgent.indexOf('MSIE 10') === -1) { // chrome or firefox
         blob = new Blob([calendar]);
       } else { // ie
         var bb = new BlobBuilder();
