@@ -223,7 +223,7 @@ var ics = function(uidDomain, prodId) {
       } else { // ie
         var bb = new BlobBuilder();
         bb.append(calendar);
-        blob = bb.getBlob('text/x-vCalendar;charset=' + document.characterSet);
+        blob = bb.getBlob('text/calendar');
       }
       saveAs(blob, filename + ext);
       return calendar;
