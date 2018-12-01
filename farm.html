@@ -252,13 +252,13 @@
 
 			switch(type) {
 				case 'Herb':
-				plant = new Plant(type, name, herb[name]['level'], 70);
+				plant = new Plant(type, name, herb[name]['level'], 80);
 				break;
 				case 'Wood':
 				plant = new Plant(type, name, wood[name]['level'], wood[name]['minutes']);
 				break;
 				case 'Fruit':
-				plant = new Plant(type, name, fruit[name]['level'], 9 * 60);
+				plant = new Plant(type, name, fruit[name]['level'], 16 * 60);
 				break;
 				case 'Spirit':
 				plant = new Plant(type, name, spirit['level'], spirit['minutes']);
