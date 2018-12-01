@@ -126,12 +126,12 @@ var ics = function(uidDomain, prodId) {
       var end_minutes = ("00" + (end_date.getMinutes().toString())).slice(-2);
       var end_seconds = ("00" + (end_date.getSeconds().toString())).slice(-2);
 	    
-	    var alarm_year = ("0000" + (end_date.getFullYear().toString())).slice(-4);
-      var alarm_month = ("00" + ((end_date.getMonth() + 1).toString())).slice(-2);
-      var alarm_day = ("00" + ((end_date.getDate()).toString())).slice(-2);
-      var alarm_hours = ("00" + (end_date.getHours().toString())).slice(-2);
-      var alarm_minutes = ("00" + (end_date.getMinutes().toString())).slice(-2);
-      var alarm_seconds = ("00" + (end_date.getSeconds().toString())).slice(-2);
+	    var alarm_year = ("0000" + (end_date.getUTCFullYear().toString())).slice(-4);
+      var alarm_month = ("00" + ((end_date.getUTCMonth() + 1).toString())).slice(-2);
+      var alarm_day = ("00" + ((end_date.getUTCDate()).toString())).slice(-2);
+      var alarm_hours = ("00" + (end_date.getUTCHours().toString())).slice(-2);
+      var alarm_minutes = ("00" + (end_date.getUTCMinutes().toString())).slice(-2);
+      var alarm_seconds = ("00" + (end_date.getUTCSeconds().toString())).slice(-2);
 
       var now_year = ("0000" + (now_date.getFullYear().toString())).slice(-4);
       var now_month = ("00" + ((now_date.getMonth() + 1).toString())).slice(-2);
