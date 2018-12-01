@@ -109,6 +109,7 @@ var ics = function(uidDomain, prodId) {
       //TODO add time and time zone? use moment to format?
       var start_date = new Date(begin);
       var end_date = new Date(stop);
+	    var alarm_date = new Date(plant.end).getTimezoneOffset() * 60000)
       var now_date = new Date();
 
       var start_year = ("0000" + (start_date.getFullYear().toString())).slice(-4);
@@ -124,6 +125,13 @@ var ics = function(uidDomain, prodId) {
       var end_hours = ("00" + (end_date.getHours().toString())).slice(-2);
       var end_minutes = ("00" + (end_date.getMinutes().toString())).slice(-2);
       var end_seconds = ("00" + (end_date.getSeconds().toString())).slice(-2);
+	    
+	    var alarm_year = ("0000" + (end_date.getFullYear().toString())).slice(-4);
+      var alarm_month = ("00" + ((end_date.getMonth() + 1).toString())).slice(-2);
+      var alarm_day = ("00" + ((end_date.getDate()).toString())).slice(-2);
+      var alarm_hours = ("00" + (end_date.getHours().toString())).slice(-2);
+      var alarm_minutes = ("00" + (end_date.getMinutes().toString())).slice(-2);
+      var alarm_seconds = ("00" + (end_date.getSeconds().toString())).slice(-2);
 
       var now_year = ("0000" + (now_date.getFullYear().toString())).slice(-4);
       var now_month = ("00" + ((now_date.getMonth() + 1).toString())).slice(-2);
@@ -135,15 +143,18 @@ var ics = function(uidDomain, prodId) {
       // Since some calendars don't add 0 second events, we need to remove time if there is none...
       var start_time = '';
       var end_time = '';
+	    var alarm_time = '';
       if (start_hours + start_minutes + start_seconds + end_hours + end_minutes + end_seconds != 0) {
         start_time = 'T' + start_hours + start_minutes + start_seconds;
         end_time = 'T' + end_hours + end_minutes + end_seconds;
+	      alarm_time = 'T' + alarm_hours + alarm_minutes + alarm_seconds;
       }
       var now_time = 'T' + now_hours + now_minutes + now_seconds;
 
       var start = start_year + start_month + start_day + start_time;
       var end = end_year + end_month + end_day + end_time;
       var now = now_year + now_month + now_day + now_time;
+	    var alarm = alarm_year + alarm_month + alarm_day + alarm_time;
 
       // recurrence rrule vars
       var rruleString;
@@ -186,7 +197,7 @@ var ics = function(uidDomain, prodId) {
         'SUMMARY;LANGUAGE=en-us:' + subject,
         'TRANSP:TRANSPARENT',
         'BEGIN:VALARM',
-		    'TRIGGER;VALUE=DATE-TIME;TZID=' + Intl.DateTimeFormat().resolvedOptions().timeZone + ':' + end,
+		    'TRIGGER;VALUE=DATE-TIME:' + alarm,
 		    'ACTION:DISPLAY',
 		    'DESCRIPTION:Alarm',
 		    'END:VALARM',
