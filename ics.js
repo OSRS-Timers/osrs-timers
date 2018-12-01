@@ -197,7 +197,7 @@ var ics = function(uidDomain, prodId) {
         'SUMMARY;LANGUAGE=en-us:' + subject,
         'TRANSP:TRANSPARENT',
         'BEGIN:VALARM',
-		    'TRIGGER;VALUE=DATE-TIME:' + alarm,
+		    'TRIGGER;VALUE=DATE-TIME:' + alarm + 'Z',
 		    'ACTION:DISPLAY',
 		    'DESCRIPTION:Alarm',
 		    'END:VALARM',
