@@ -243,7 +243,7 @@
 				this.level = level;
 				this.growTime = minutes;
 				this.begin = Date.now();
-				this.end = new Date(this.begin + this.growTime * 60000);
+				this.end = new Date(this.begin + this.growTime * 60000).getTime();
 			}
 		}
 
