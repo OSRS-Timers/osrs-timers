@@ -234,7 +234,7 @@
 			"minutes": 3520
 		}
 
-		var ics = ics();
+		var ics = ics('osrstimers');
 
 		let Plant = class {
 			constructor(type, name, level, minutes) {
@@ -276,7 +276,8 @@
 				"Courtesy of OSRS Farm Timer :)", 
 				"Gielinor",
 				plant.begin,
-				plant.end);
+				plant.end,
+				plant.name);
 
 			document.querySelector("button[name='" + plant.name + "']").setAttribute('disabled', null);
 		}
