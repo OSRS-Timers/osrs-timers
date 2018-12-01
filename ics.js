@@ -109,7 +109,7 @@ var ics = function(uidDomain, prodId) {
       //TODO add time and time zone? use moment to format?
       var start_date = new Date(begin);
       var end_date = new Date(stop);
-	    var alarm_date = new Date(plant.end).getTimezoneOffset() * 60000)
+	    var alarm_date = new Date(end_date.getTime() + end_date.getTimezoneOffset() * 60000)
       var now_date = new Date();
 
       var start_year = ("0000" + (start_date.getFullYear().toString())).slice(-4);
